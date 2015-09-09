@@ -1,9 +1,11 @@
 var primeSifting = function(number) {
 
-  var result = false;
+  var result = true;
   for (var i = 2; i < number; i++) {
-    if(number % i)
-      result = true;
+    if(number % i == 0) {
+      result = false;
+      break;
+    }
   }
   if(number == 1)
     result = true;
